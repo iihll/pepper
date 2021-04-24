@@ -1,0 +1,33 @@
+{
+  "name": "pepper",
+  "version": "0.0.1",
+  "description": "A Component Library for Vue.js.",
+  "main": "index.js",
+  "repository": "https://github.com/iihll/pepper.git",
+  "author": "iihll coderlt",
+  "license": "MIT",
+  "scripts": {
+    "build:file": "node build/bin/build-entry.js",
+    "new": "node build/bin/new.js",
+    "dev": "yarn build:file && vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "dependencies": {
+    "vue": "^2.6.12"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.41",
+    "cross-env": "^7.0.3",
+    "css-loader": "^5.2.4",
+    "file-save": "^0.2.0",
+    "html-webpack-plugin": "^5.3.1",
+    "json-templater": "^1.2.0",
+    "less": "^4.1.1",
+    "less-loader": "5.0.0",
+    "uppercamelcase": "^3.0.0",
+    "vue-loader": "^15.9.6",
+    "vue-router": "^3.5.1",
+    "vue-template-compiler": "^2.6.12",
+    "vuepress": "^1.8.2"
+  }
+}
