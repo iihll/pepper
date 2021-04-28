@@ -1,0 +1,43 @@
+{
+  "zh-CN": {
+    "guide": [
+      {
+        "title": "Basic",
+        "children": []
+      },
+      {
+        "title": "Form",
+        "children": [
+          [
+            "input",
+            "input 输入框"
+          ]
+        ]
+      },
+      {
+        "title": "Others",
+        "children": [
+          []
+        ]
+      }
+    ]
+  },
+  "en-US": {
+    "guide": [
+      {
+        "title": "Basic",
+        "children": []
+      },
+      {
+        "title": "Form",
+        "children": [
+          "input"
+        ]
+      },
+      {
+        "title": "Others",
+        "children": []
+      }
+    ]
+  }
+}
