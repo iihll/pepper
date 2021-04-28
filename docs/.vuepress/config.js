@@ -4,31 +4,27 @@ module.exports = {
   locales: {
     '/': {
       lang: 'en-US',
-      title: 'Pepper ui',
-      description: 'Vue-powered Static Site Generator'
+      title: 'Pepper',
+      description: 'A Desktop UI Library'
     },
     '/zh-CN/': {
       lang: 'zh-CN',
-      title: 'Pepper ui',
-      description: 'Vue 驱动的静态网站生成器'
+      title: 'Pepper',
+      description: '网站快速成型工具'
     }
   },
   themeConfig: {
     locales: {
-      '/': {
-        label: 'English',
-        selectText: 'Languages',
-        editLinkText: 'Edit this page on GitHub',
+      '/zh-CN/': {
+        nav: navConfigFile['zh-CN'].nav,
         sidebar: {
-          '/guide/': navConfigFile['en-US'].guide
+          '/zh-CN/component/': navConfigFile['zh-CN'].component
         }
       },
-      '/zh-CN/': {
-        selectText: '选择语言',
-        label: '简体中文',
-        editLinkText: '在 GitHub 上编辑此页',
+      '/': {
+        nav: navConfigFile['en-US'].nav,
         sidebar: {
-          '/zh-CN/guide/': navConfigFile['zh-CN'].guide
+          '/component/': navConfigFile['en-US'].component
         }
       }
     }

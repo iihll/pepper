@@ -39,12 +39,12 @@ export default {
 </script>`
   },
   {
-    filename: path.join('../../docs/zh-CN/guide', `${componentname}.md`),
-    content: `## ${ComponentName} ${chineseName}`
+    filename: path.join('../../docs/zh-CN/component', `${componentname}.md`),
+    content: `# ${ComponentName} ${chineseName}`
   },
   {
-    filename: path.join('../../docs/guide', `${componentname}.md`),
-    content: `## ${ComponentName}`
+    filename: path.join('../../docs/component', `${componentname}.md`),
+    content: `# ${ComponentName}`
   },
   {
     filename: path.join('../../test/unit/specs', `${componentname}.spec.js`),
@@ -121,16 +121,20 @@ Files.forEach(file => {
 const navConfigFile = require('../../config/nav.config.json')
 
 Object.keys(navConfigFile).forEach(lang => {
-  let guide = navConfigFile[lang].guide
+  let component = navConfigFile[lang].component
   const item = lang === 'zh-CN' ? [`${componentname}`, componentname + ' ' + chineseName] : componentname
   if(navGroupName) {
-    guide.forEach(group => {
+    component.forEach(group => {
       if(group.title === navGroupName) {
         group.children.push(item)
       }
     })
+    component.push({
+      title: navGroupName,
+      children: [item]
+    })
   } else {
-    guide[guide.length - 1].children.push(item)
+    component[component.length - 1].children.push(item)
   }
 })
 

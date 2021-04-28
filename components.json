@@ -1,3 +1,5 @@
 {
-  "input": "./packages/input/index.js"
+  "input": "./packages/input/index.js",
+  "card": "./packages/card/index.js",
+  "link": "./packages/link/index.js"
 }

@@ -1,12 +1,23 @@
 {
   "zh-CN": {
-    "guide": [
+    "nav": [
+      { "text": "指南", "link": "/zh-CN/guide/" },
+      { "text": "组件", "link": "/zh-CN/component/" }
+    ],
+    "component": [
       {
         "title": "Basic",
-        "children": []
+        "collapsable": false,
+        "children": [
+          [
+            "link",
+            "link 链接"
+          ]
+        ]
       },
       {
         "title": "Form",
+        "collapsable": false,
         "children": [
           [
             "input",
@@ -16,27 +27,42 @@
       },
       {
         "title": "Others",
+        "collapsable": false,
         "children": [
-          []
+          [
+            "card",
+            "card 卡片"
+          ]
         ]
       }
     ]
   },
   "en-US": {
-    "guide": [
+    "nav": [
+      { "text": "Guide", "link": "/guide/" },
+      { "text": "Component", "link": "/component/" }
+    ],
+    "component": [
       {
         "title": "Basic",
-        "children": []
+        "collapsable": false,
+        "children": [
+          "link"
+        ]
       },
       {
         "title": "Form",
+        "collapsable": false,
         "children": [
           "input"
         ]
       },
       {
         "title": "Others",
-        "children": []
+        "collapsable": false,
+        "children": [
+          "card"
+        ]
       }
     ]
   }
