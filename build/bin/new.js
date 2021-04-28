@@ -10,6 +10,7 @@ const fs = require('fs')
 const fileSave = require('file-save')
 const uppercamelcase = require('uppercamelcase')
 const componentname = process.argv[2]
+const navGroupName = process.argv[4]
 const chineseName = process.argv[3] || componentname
 const ComponentName = uppercamelcase(componentname)
 const PackagePath = path.resolve(__dirname, '../../packages', componentname)
@@ -38,11 +39,11 @@ export default {
 </script>`
   },
   {
-    filename: path.join('../../docs/zh-CN', `${componentname}.md`),
+    filename: path.join('../../docs/zh-CN/guide', `${componentname}.md`),
     content: `## ${ComponentName} ${chineseName}`
   },
   {
-    filename: path.join('../../docs/en-US', `${componentname}.md`),
+    filename: path.join('../../docs/guide', `${componentname}.md`),
     content: `## ${ComponentName}`
   },
   {
@@ -70,11 +71,11 @@ describe('${ComponentName}', () => {
     ),
     // TODO 待完善
     content: ''
-//     content: `@import "mixins/mixins";
-// @import "common/var"
+    //     content: `@import "mixins/mixins";
+    // @import "common/var"
 
-// @include b(${componentname}) {
-// }`
+    // @include b(${componentname}) {
+    // }`
   },
   {
     filename: path.join('../../types', `${componentname}.d.ts`),
@@ -105,7 +106,9 @@ const sassPath = path.join(
 const sassImportText = `${fs.readFileSync(
   sassPath
 )}@import "./${componentname}.less";`
-fileSave(sassPath).write(sassImportText, 'utf8').end('\n')
+fileSave(sassPath)
+  .write(sassImportText, 'utf8')
+  .end('\n')
 
 // 创建 package
 Files.forEach(file => {
@@ -113,5 +116,26 @@ Files.forEach(file => {
     .write(file.content, 'utf8')
     .end('\n')
 })
+
+// 添加到 nav.config.json
+const navConfigFile = require('../../config/nav.config.json')
+
+Object.keys(navConfigFile).forEach(lang => {
+  let guide = navConfigFile[lang].guide
+  const item = lang === 'zh-CN' ? [`${componentname}`, componentname + ' ' + chineseName] : componentname
+  if(navGroupName) {
+    guide.forEach(group => {
+      if(group.title === navGroupName) {
+        group.children.push(item)
+      }
+    })
+  } else {
+    guide[guide.length - 1].children.push(item)
+  }
+})
+
+fileSave(path.join(__dirname, '../../config/nav.config.json'))
+  .write(JSON.stringify(navConfigFile, null, '  '), 'utf8')
+  .end('\n')
 
 console.log('DONE!')
