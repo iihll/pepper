@@ -124,15 +124,18 @@ Object.keys(navConfigFile).forEach(lang => {
   let component = navConfigFile[lang].component
   const item = lang === 'zh-CN' ? [`${componentname}`, componentname + ' ' + chineseName] : componentname
   if(navGroupName) {
-    component.forEach(group => {
-      if(group.title === navGroupName) {
-        group.children.push(item)
-      }
-    })
-    component.push({
-      title: navGroupName,
-      children: [item]
-    })
+    if(component.filter(group => group.title === navGroupName)) {
+      component.forEach(group => {
+        if(group.title === navGroupName) {
+          group.children.push(item)
+        }
+      })
+    } else {
+      component.push({
+        title: navGroupName,
+        children: [item]
+      })
+    }
   } else {
     component[component.length - 1].children.push(item)
   }

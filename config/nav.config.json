@@ -14,12 +14,7 @@
       {
         "title": "Basic",
         "collapsable": false,
-        "children": [
-          [
-            "button",
-            "button 按钮"
-          ]
-        ]
+        "children": []
       },
       {
         "title": "Form",
@@ -30,15 +25,6 @@
         "title": "Others",
         "collapsable": false,
         "children": []
-      },
-      {
-        "title": "Basic",
-        "children": [
-          [
-            "button",
-            "button 按钮"
-          ]
-        ]
       }
     ]
   },
@@ -57,9 +43,7 @@
       {
         "title": "Basic",
         "collapsable": false,
-        "children": [
-          "button"
-        ]
+        "children": []
       },
       {
         "title": "Form",
@@ -70,12 +54,6 @@
         "title": "Others",
         "collapsable": false,
         "children": []
-      },
-      {
-        "title": "Basic",
-        "children": [
-          "button"
-        ]
       }
     ]
   }
