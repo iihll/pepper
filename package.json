@@ -14,7 +14,7 @@
     "lint": "eslint .",
     "commit": "git-cz",
     "commitlint": "validate-commit-msg",
-    "prepare": "husky install"
+    "prepare": "husky install && husky add .husky/commit-msg 'yarn commitlint'"
   },
   "dependencies": {
     "vue": "^2.6.12"

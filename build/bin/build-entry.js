@@ -16,7 +16,7 @@ const components = [
 {{install}}
 ]
 
-const install = function(Vue, opts = {}) {
+const install = function(Vue) {
 
   components.forEach(component => {
     Vue.component(component.name, component);
@@ -83,20 +83,12 @@ var template = render(MAIN_TEMPLATE, {
 fs.writeFileSync(OUTPUT_PATH, template)
 console.log('[build entry] DONE:', OUTPUT_PATH)
 
-// TODO docs path 
 const docComponentPath = path.join(__dirname, '../../docs/.vuepress/enhanceApp.js')
 
-var enhanceAppTemplate = `
-import Pepper from '../../src/index'
+var enhanceAppTemplate = `import Pepper from '../../src/index'
 import '../../packages/theme-chalk/src/index.less'
 
-export default ({
-  Vue,
-  options,
-  router,
-  siteData,
-  isServer
-}) => {
+export default ({Vue}) => {
   Vue.use(Pepper)
 }
 `
