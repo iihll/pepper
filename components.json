@@ -1,5 +1,6 @@
 {
   "input": "./packages/input/index.js",
   "card": "./packages/card/index.js",
-  "link": "./packages/link/index.js"
+  "link": "./packages/link/index.js",
+  "button": "./packages/button/index.js"
 }
