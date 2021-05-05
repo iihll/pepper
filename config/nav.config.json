@@ -18,6 +18,10 @@
           [
             "button",
             "button 按钮"
+          ],
+          [
+            "input",
+            "input 输入框"
           ]
         ]
       },
@@ -37,6 +41,10 @@
           [
             "button",
             "button 按钮"
+          ],
+          [
+            "input",
+            "input 输入框"
           ]
         ]
       }
@@ -58,7 +66,8 @@
         "title": "Basic",
         "collapsable": false,
         "children": [
-          "button"
+          "button",
+          "input"
         ]
       },
       {
@@ -74,7 +83,8 @@
       {
         "title": "Basic",
         "children": [
-          "button"
+          "button",
+          "input"
         ]
       }
     ]

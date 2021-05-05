@@ -3,11 +3,13 @@
 import Input from '../packages/input/index.js';
 import Card from '../packages/card/index.js';
 import Link from '../packages/link/index.js';
+import Button from '../packages/button/index.js';
 
 const components = [
   Input,
   Card,
-  Link
+  Link,
+  Button
 ]
 
 const install = function(Vue) {
@@ -27,5 +29,6 @@ export default {
   install,
   Input,
   Card,
-  Link
+  Link,
+  Button
 }
