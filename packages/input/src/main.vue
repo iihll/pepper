@@ -52,15 +52,12 @@ export default {
   },
   methods: {
     handleInput (e) {
-      console.log('value', e.target.minHeight);
       const hiddenTextarea = e.target
       // 是 textarea 元素，并且开启了自适应高度。
       if (this.textarea && this.autoHeight) {
         e.target.style.height = "inherit";
         this.scrollHeight = e.target.scrollHeight
         e.target.style.height = `${this.scrollHeight - 4}px`;
-        // hiddenTextarea.parentNode && hiddenTextarea.parentNode.removeChild(hiddenTextarea);
-        // hiddenTextarea = null;
       }
       this.$emit('input', e.target.value)
     },
