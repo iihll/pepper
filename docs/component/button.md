@@ -1,17 +1,17 @@
 # Button
 ### 颜色
 ``` html
-  <p-button color="yellow">黄色</p-button>
-  <p-button color="green">绿色</p-button>
-  <p-button color="red">红色</p-button>
-  <p-button color="blue">蓝色</p-button>
-  <p-button color="purple">主题色</p-button>
+  <p-button type="yellow">黄色</p-button>
+  <p-button type="green">绿色</p-button>
+  <p-button type="red">红色</p-button>
+  <p-button type="blue">蓝色</p-button>
+  <p-button type="purple">主题色</p-button>
 ```
-<p-button color="yellow">黄色</p-button>
-<p-button color="green">绿色</p-button>
-<p-button color="red">红色</p-button>
-<p-button color="blue">蓝色</p-button>
-<p-button color="purple">主题色</p-button>
+<p-button type="yellow">黄色</p-button>
+<p-button type="green">绿色</p-button>
+<p-button type="red">红色</p-button>
+<p-button type="blue">蓝色</p-button>
+<p-button type="purple">主题色</p-button>
 
 ### 大小
 ``` html
