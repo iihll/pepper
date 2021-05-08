@@ -83,7 +83,10 @@ var template = render(MAIN_TEMPLATE, {
 fs.writeFileSync(OUTPUT_PATH, template)
 console.log('[build entry] DONE:', OUTPUT_PATH)
 
-const docComponentPath = path.join(__dirname, '../../docs/.vuepress/enhanceApp.js')
+const docComponentPath = path.join(
+  __dirname,
+  '../../docs/.vuepress/enhanceApp.js'
+)
 
 var enhanceAppTemplate = `import Pepper from '../../src/index'
 import '../../packages/theme-chalk/src/index.less'

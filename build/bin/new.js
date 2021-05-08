@@ -106,9 +106,7 @@ const sassPath = path.join(
 const sassImportText = `${fs.readFileSync(
   sassPath
 )}@import "./${componentname}.less";`
-fileSave(sassPath)
-  .write(sassImportText, 'utf8')
-  .end('\n')
+fileSave(sassPath).write(sassImportText, 'utf8').end('\n')
 
 // 创建 package
 Files.forEach(file => {
@@ -122,17 +120,23 @@ const navConfigFile = require('../../config/nav.config.json')
 
 Object.keys(navConfigFile).forEach(lang => {
   let component = navConfigFile[lang].component
-  const item = lang === 'zh-CN' ? [`${componentname}`, componentname + ' ' + chineseName] : componentname
-  if(navGroupName) {
-    component.forEach(group => {
-      if(group.title === navGroupName) {
-        group.children.push(item)
-      }
-    })
-    component.push({
-      title: navGroupName,
-      children: [item]
-    })
+  const item =
+    lang === 'zh-CN'
+      ? [`${componentname}`, componentname + ' ' + chineseName]
+      : componentname
+  if (navGroupName) {
+    if (component.filter(group => group.title === navGroupName)) {
+      component.forEach(group => {
+        if (group.title === navGroupName) {
+          group.children.push(item)
+        }
+      })
+    } else {
+      component.push({
+        title: navGroupName,
+        children: [item]
+      })
+    }
   } else {
     component[component.length - 1].children.push(item)
   }
