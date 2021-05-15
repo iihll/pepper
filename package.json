@@ -20,6 +20,7 @@
     "test": ""
   },
   "dependencies": {
+    "cache-loader": "^4.1.0",
     "vue": "^2.6.12",
     "webpack": "4.0.0"
   },
