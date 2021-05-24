@@ -1,10 +1,10 @@
 import Vue from 'vue'
 
 /** PepperUI component common definition */
-export declare class PepperUIComponent extends Vue {
+export declare class PepperComponent extends Vue {
   /** Install component into Vue */
   static install(vue: typeof Vue): void
 }
 
 /** Component size definition for button, input, etc */
-export type PepperUIComponentSize = 's' | 'm' | 'l'
+export type PepperComponentSize = 's' | 'm' | 'l'

@@ -28,6 +28,10 @@
           [
             "button",
             "button 按钮"
+          ],
+          [
+            "input",
+            "input 输入框"
           ]
         ]
       }
@@ -59,7 +63,8 @@
         "title": "Others",
         "collapsable": false,
         "children": [
-          "button"
+          "button",
+          "input"
         ]
       }
     ]
