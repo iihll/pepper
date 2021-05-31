@@ -1,12 +1,12 @@
-import { PepperUIComponent, PepperUIComponentSize } from './components'
+import { PepperComponent, PepperComponentSize } from './component'
 
 /** Button type */
 export type ButtonType = 'yellow' | 'green' | 'red' | 'blue' | 'gray' | 'pepper'
 
 /** Button Component */
-export declare class PButton extends PepperUIComponent {
+export declare class PButton extends PepperComponent {
   /** Button size */
-  size: PepperUIComponentSize
+  size: PepperComponentSize
 
   /** Button type */
   type: ButtonType
