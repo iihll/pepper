@@ -79,10 +79,10 @@ describe('${ComponentName}', () => {
   },
   {
     filename: path.join('../../types', `${componentname}.d.ts`),
-    content: `import { PerpperComponent } from './component'
+    content: `import { PepperComponent } from './component'
 
 /** ${ComponentName} Component */
-export declare class P${ComponentName} extends PerpperComponent {
+export declare class P${ComponentName} extends PepperComponent {
 }`
   }
 ]
