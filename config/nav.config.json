@@ -24,7 +24,12 @@
       {
         "title": "Others",
         "collapsable": false,
-        "children": []
+        "children": [
+          [
+            "button",
+            "button 按钮"
+          ]
+        ]
       }
     ]
   },
@@ -53,7 +58,9 @@
       {
         "title": "Others",
         "collapsable": false,
-        "children": []
+        "children": [
+          "button"
+        ]
       }
     ]
   }
