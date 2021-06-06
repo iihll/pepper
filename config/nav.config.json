@@ -32,6 +32,10 @@
           [
             "input",
             "input 输入框"
+          ],
+          [
+            "link",
+            "link 链接"
           ]
         ]
       }
@@ -64,7 +68,8 @@
         "collapsable": false,
         "children": [
           "button",
-          "input"
+          "input",
+          "link"
         ]
       }
     ]

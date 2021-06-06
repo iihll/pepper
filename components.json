@@ -1,4 +1,5 @@
 {
   "button": "./packages/button/index.js",
-  "input": "./packages/input/index.js"
+  "input": "./packages/input/index.js",
+  "link": "./packages/link/index.js"
 }

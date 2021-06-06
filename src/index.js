@@ -2,10 +2,12 @@
 
 import Button from '../packages/button/index.js';
 import Input from '../packages/input/index.js';
+import Link from '../packages/link/index.js';
 
 const components = [
   Button,
-  Input
+  Input,
+  Link
 ]
 
 const install = function(Vue) {
@@ -24,5 +26,6 @@ export default {
   version: '0.0.1',
   install,
   Button,
-  Input
+  Input,
+  Link
 }
